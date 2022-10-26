@@ -1,0 +1,46 @@
+﻿@model Category
+
+
+@{
+    ViewBag.Title = "AddCategory";
+}
+
+<div class="jumbotron">
+    Kategori Ekleme Sayfası
+</div>
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        <div class="panel panel-body">
+
+            @using (Html.BeginForm())
+            {
+                <div>
+                    @Html.TextBoxFor(x => x.CategoryName, new { @class="form-control",placeholder="Kategori ismi giriniz"})
+                </div>
+                <br />
+
+
+                <div>
+                    @Html.TextBoxFor(x => x.Description, new {@class="form-control",placeholder="Acıklama giriniz"})
+                </div>
+                <br />
+                <button class="btn btn-primary">
+                    Ekle
+                </button>
+            }
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
